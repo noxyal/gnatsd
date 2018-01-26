@@ -17,6 +17,7 @@ import (
 	"strings"
 	"sync"
 	"time"
+	"github.com/noxyal/WSwrapper"
 
 	// Allow dynamic profiling.
 	_ "net/http/pprof"
@@ -430,6 +431,11 @@ func (s *Server) AcceptLoop(clr chan struct{}) {
 	close(clr)
 	clr = nil
 
+	WSwrapper.Serve(l, hp, func(conn net.Conn) {
+		s.createClient(conn)
+		s.grWG.Done()
+	})
+	/*
 	tmpDelay := ACCEPT_MIN_SLEEP
 
 	for s.isRunning() {
@@ -454,6 +460,7 @@ func (s *Server) AcceptLoop(clr chan struct{}) {
 			s.grWG.Done()
 		})
 	}
+	*/
 	s.Noticef("Server Exiting..")
 	s.done <- true
 }
