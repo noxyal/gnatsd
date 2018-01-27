@@ -433,7 +433,6 @@ func (s *Server) AcceptLoop(clr chan struct{}) {
 
 	WSwrapper.Serve(l, hp, func(conn net.Conn) {
 		s.createClient(conn)
-		s.grWG.Done()
 	})
 	/*
 	tmpDelay := ACCEPT_MIN_SLEEP
