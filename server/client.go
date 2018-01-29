@@ -44,7 +44,7 @@ const (
 // For controlling dynamic buffer sizes.
 const (
 	startBufSize = 512 // For INFO/CONNECT block
-	minBufSize   = 128
+	minBufSize   = 512
 	maxBufSize   = 65536
 )
 
