@@ -1,39 +1,28 @@
 package WSwrapper
 
 import (
+	//"strconv"
 	"github.com/gorilla/websocket"
 	"time"
 	"net"
 	"net/url"
 	"net/http"
-	"io"
+	//"io"
 )
-
 type WSconn struct{ 
 	*websocket.Conn
-	r io.Reader
 }
 func (ws WSconn) Read(b []byte) (int, error) {
-	var n int
-	var err error
-	if ws.r != nil {
-		n, err = ws.r.Read(b)
-		if n < len(b) {
-			ws.r = nil
-		}
-	} else {
-		_, r, err := ws.NextReader()
-		if err != nil {
-			return 0, err
-		}
-		n, err = r.Read(b)
-		if n < len(b) {
-			ws.r = nil
-		} else {
-			ws.r = r
-		}
+	_, r, err := ws.NextReader()
+	if err != nil {
+		return 0, err
 	}
+	n, err := r.Read(b)
+
+	//println(strconv.Itoa(n) + " / " + strconv.Itoa(len(b)))
+	//println(string(b[:n]))
 	return n, err
+	
 }
 func (ws WSconn) Write(b []byte) (int, error) {
 	err := ws.WriteMessage(websocket.TextMessage, b)
@@ -69,11 +58,11 @@ type Dialer struct {}
 func (d *Dialer) Dial(network, address string) (net.Conn, error){
 	u := url.URL{Scheme: "ws", Host: address, Path: "/"}
 	conn, _, err := websocket.DefaultDialer.Dial(u.String(), nil)
-	return WSconn{conn, nil}, err
+	return WSconn{conn}, err
 }
 var upgrader = websocket.Upgrader{
-	ReadBufferSize:  1024,
-	WriteBufferSize: 1024,
+	ReadBufferSize:  512,
+	WriteBufferSize: 512,
 }
 func Serve(ln net.Listener, address string, handler func(net.Conn) ) {
 
@@ -83,7 +72,7 @@ func Serve(ln net.Listener, address string, handler func(net.Conn) ) {
 			println(err)
 			panic(err.Error())
 		}
-		handler(WSconn{conn, nil})
+		handler(WSconn{conn})
 	})
 	server := &http.Server{Addr: address}
 	e := server.Serve(tcpKeepAliveListener{ln.(*net.TCPListener)})
