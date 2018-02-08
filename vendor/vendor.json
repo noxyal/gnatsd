@@ -1,0 +1,121 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "O9Gjl1F5NFZoi4HgmkQohzwl+dk=",
+			"path": "github.com/gorilla/websocket",
+			"revision": "0b847f2facc24ec406130a05bb1bb72d41993b05",
+			"revisionTime": "2016-10-21T19:35:05Z"
+		},
+		{
+			"checksumSHA1": "SmycCXPUchomrzqxyRZvk3bHnLM=",
+			"path": "github.com/nats-io/gnatsd/conf",
+			"revision": "b56ca22d1bfb571fa395a35fe698b0eb7f95e706",
+			"revisionTime": "2018-01-15T23:27:18Z"
+		},
+		{
+			"checksumSHA1": "aIxP/XBLFD5iaqJHdLDpy8/au3U=",
+			"path": "github.com/nats-io/gnatsd/logger",
+			"revision": "b56ca22d1bfb571fa395a35fe698b0eb7f95e706",
+			"revisionTime": "2018-01-15T23:27:18Z"
+		},
+		{
+			"checksumSHA1": "jHUlYAtPa0NehavLd0ZiWRtl4iw=",
+			"path": "github.com/nats-io/gnatsd/server",
+			"revision": "b56ca22d1bfb571fa395a35fe698b0eb7f95e706",
+			"revisionTime": "2018-01-15T23:27:18Z"
+		},
+		{
+			"checksumSHA1": "r0CCAGCVIAgUGImpsZbSAjiVaAY=",
+			"path": "github.com/nats-io/gnatsd/server/pse",
+			"revision": "b56ca22d1bfb571fa395a35fe698b0eb7f95e706",
+			"revisionTime": "2018-01-15T23:27:18Z"
+		},
+		{
+			"checksumSHA1": "gBWCOqKsG1Uw/GJFFYGUhbNxkt0=",
+			"path": "github.com/nats-io/gnatsd/util",
+			"revision": "b56ca22d1bfb571fa395a35fe698b0eb7f95e706",
+			"revisionTime": "2018-01-15T23:27:18Z"
+		},
+		{
+			"checksumSHA1": "Q/4K/c04/FNEhNYI4BxFr92AEQw=",
+			"path": "github.com/nats-io/go-nats",
+			"revision": "c7e16c2459ca762da74ede0ed1513ba6caa8922c",
+			"revisionTime": "2018-01-25T20:23:15Z"
+		},
+		{
+			"checksumSHA1": "Q2c9uTEIGhSIddv5pntYdFNtUdk=",
+			"path": "github.com/nats-io/go-nats/encoders/builtin",
+			"revision": "c7e16c2459ca762da74ede0ed1513ba6caa8922c",
+			"revisionTime": "2018-01-25T20:23:15Z"
+		},
+		{
+			"checksumSHA1": "K3GMvVTn1nlWpwLV+NCfDdfIt3I=",
+			"path": "github.com/nats-io/go-nats/util",
+			"revision": "c7e16c2459ca762da74ede0ed1513ba6caa8922c",
+			"revisionTime": "2018-01-25T20:23:15Z"
+		},
+		{
+			"checksumSHA1": "qI+4s7mlYYbB7ppay+Z3Y7+mhik=",
+			"path": "github.com/nats-io/nuid",
+			"revision": "3cf34f9fca4e88afa9da8eabd75e3326c9941b44",
+			"revisionTime": "2017-03-03T15:02:24Z"
+		},
+		{
+			"checksumSHA1": "WSb9AKccGamLvn1EBvRicrtEJoU=",
+			"path": "github.com/noxyal/WSwrapper",
+			"revision": "bfbf718d23e844125ccb622086c7d88f62bafcd9",
+			"revisionTime": "2018-01-28T13:18:05Z"
+		},
+		{
+			"checksumSHA1": "UWjVYmoHlIfHzVIskELHiJQtMOI=",
+			"path": "golang.org/x/crypto/bcrypt",
+			"revision": "9419663f5a44be8b34ca85f08abc5fe1be11f8a3",
+			"revisionTime": "2017-09-30T17:45:11Z"
+		},
+		{
+			"checksumSHA1": "oVPHWesOmZ02vLq2fglGvf+AMgk=",
+			"path": "golang.org/x/crypto/blowfish",
+			"revision": "9419663f5a44be8b34ca85f08abc5fe1be11f8a3",
+			"revisionTime": "2017-09-30T17:45:11Z"
+		},
+		{
+			"checksumSHA1": "GUzvy5+6gTwjQ2PaXxjHfbqjOVw=",
+			"path": "golang.org/x/sys/windows",
+			"revision": "fb4cac33e3196ff7f507ab9b2d2a44b0142f5b5a",
+			"revisionTime": "2017-06-14T06:48:48Z"
+		},
+		{
+			"checksumSHA1": "ZdFZFaXmCgEEaEhVPkyXrnhKhsg=",
+			"path": "golang.org/x/sys/windows/registry",
+			"revision": "fb4cac33e3196ff7f507ab9b2d2a44b0142f5b5a",
+			"revisionTime": "2017-06-14T06:48:48Z"
+		},
+		{
+			"checksumSHA1": "TdCQEasBFqLJ/5mQgTvesIwC4BI=",
+			"path": "golang.org/x/sys/windows/svc",
+			"revision": "fb4cac33e3196ff7f507ab9b2d2a44b0142f5b5a",
+			"revisionTime": "2017-06-14T06:48:48Z"
+		},
+		{
+			"checksumSHA1": "lZi+t2ilFyYSpqL1ThwNf8ot3WQ=",
+			"path": "golang.org/x/sys/windows/svc/debug",
+			"revision": "fb4cac33e3196ff7f507ab9b2d2a44b0142f5b5a",
+			"revisionTime": "2017-06-14T06:48:48Z"
+		},
+		{
+			"checksumSHA1": "uVlUSSKplihZG7N+QJ6fzDZ4Kh8=",
+			"path": "golang.org/x/sys/windows/svc/eventlog",
+			"revision": "fb4cac33e3196ff7f507ab9b2d2a44b0142f5b5a",
+			"revisionTime": "2017-06-14T06:48:48Z"
+		},
+		{
+			"checksumSHA1": "+OPy/ga50ikLv5w5Pf4WvBYThrQ=",
+			"path": "golang.org/x/sys/windows/svc/mgr",
+			"revision": "fb4cac33e3196ff7f507ab9b2d2a44b0142f5b5a",
+			"revisionTime": "2017-06-14T06:48:48Z"
+		}
+	],
+	"rootPath": "github.com/noxyal/gnatsd-ws"
+}
